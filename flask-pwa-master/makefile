@@ -7,9 +7,9 @@ environment:
 
 .PHONY: install
 install:
-	pip freeze | xargs -r pip uninstall -y && \
-	pip install -r requirements.txt
+	pip3 freeze | xargs -r pip3 uninstall -y && \
+	pip3 install -r requirements.txt
 
 .PHONY: run
 run:
-	export FLASK_ENV=development && flask run
+	export FLASK_ENV=development && flask run -p 15316
