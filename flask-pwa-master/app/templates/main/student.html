@@ -45,7 +45,7 @@
   <main>
     <form id='mainform' method="POST" action="{{ url_for('main.submit_form') }}" onsubmit="doSubmit()">
          <a href="{{  url_for('main.index')  }}">
-                       <img src="images/back.png" style="width:40px;height:30px; object-fit:scale-down; left:0px;"></a>
+                       <img src="{{ url_for('static', filename='images/back.png') }}" style="width:40px;height:30px; object-fit:scale-down; left:0px;"></a>
         <h3 for="question-dropdown" class="title-1">Select a question:</h3>
         <select id="question-dropdown" name="question-dropdown">
         </select>
