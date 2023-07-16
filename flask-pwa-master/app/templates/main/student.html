@@ -43,7 +43,7 @@
 {% block main %}
 <article>
   <main>
-    <form method="POST" action="{{ url_for('main.submit_form') }}" onsubmit="doSubmit()">
+    <form id='mainform' method="POST" action="{{ url_for('main.submit_form') }}" onsubmit="doSubmit()">
         <label for="question-dropdown">Select a question:</label>
         <select id="question-dropdown" name="question-dropdown">
         </select>
@@ -52,8 +52,7 @@
         <img id="question-image" src="" alt="Question Image">
         <br>
         <label for="youtube-link">YouTube Link:</label>
-        <div><textarea rows="1" cols="40" placeholder="">
-</textarea></div>
+        <div><textarea rows="1" cols="40" placeholder="" id="youtube-link" name="youtube-link" form="mainform"></textarea></div>
         <br>
         <div><input class="btn-1" type="submit" value="Submit"></div>
     </form>
