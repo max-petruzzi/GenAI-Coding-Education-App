@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block main %}
+    <article>
+        <header>
+        </header>
+        <main>
+            <h2 class="title-1">Creating an Assignment</h2>
+            <h3 class ="title-1">Topic</h3>
+            <div class="dropdown" id="topic">
+                <input class="text-box" id="topic-text" type="text" placeholder="Select on" readonly>
+                <div class="options">
+                    <div onclick="show('KNN', '#topic-text')">KNN</div>
+                    <div onclick="show('Decision Trees', '#topic-text')">Decision Trees</div>
+                </div>
+            </div>
+
+            <script>
+                function show(value, id) {
+                    document.querySelector(id).value = value;
+                }
+                let dropdown = document.querySelector('#topic')
+                dropdown.onclick = function () {
+                    dropdown.classList.toggle("active")
+                }
+            </script>
+            <h3 class="title-1">Question</h3>
+            <div><textarea rows="1" cols="20" placeholder="Question Title"></textarea></div>
+            <div><textarea rows="2" cols="40" placeholder="Question Description">
+</textarea></div>
+            <h3 class="title-1">Diagram</h3>
+            <div class="dropdown" id="diagram">
+                <input class="text-box" id="diagram-text" type="text" placeholder="Select on" readonly>
+                <div class="options">
+                    <div onclick="show('1', '#diagram-text')">1</div>
+                    <div onclick="show('2', '#diagram-text')">2</div>
+                </div>
+            </div>
+            <script>
+                let dropdown1 = document.querySelector("#diagram")
+                dropdown1.onclick = function () {
+                    dropdown1.classList.toggle("active")
+                }
+            </script>
+ <h3 class="title-1">Submission Type</h3>
+
+            <div class="dropdown" id="submit">
+                <input class="text-box" id="submit-text" type="text" placeholder="Select on" readonly>
+                <div class="options">
+                    <div onclick="show('Code','#submit-text')">Code</div>
+                    <div onclick="show('Video','#submit-text')">Video</div>
+                </div>
+            </div>
+            <script>
+
+                let dropdown2 = document.querySelector("#submit")
+                dropdown2.onclick = function () {
+                    dropdown2.classList.toggle("active")
+                }
+            </script>
+            <div><button class="btn-1"><a href="{{ url_for('main.teacher') }}">Submit</a></button></div>
+        </main>
+
+    </article>
+{% endblock %}
