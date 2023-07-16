@@ -155,7 +155,7 @@ a:hover {
     border: 1px solid transparent;
     border-radius: .75rem;
     padding: .75rem 1.5rem;
-    margin: 1rem;
+    margin: 1rem 0rem 1rem 0rem;
     box-sizing: border-box;
     color: #FFFFFF;
     cursor: pointer;
@@ -183,6 +183,18 @@ a:hover {
     outline: 2px solid transparent;
     outline-offset: 2px;
 }
+
+.text-small-bold{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+.date-selector{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
 
 
  *{
