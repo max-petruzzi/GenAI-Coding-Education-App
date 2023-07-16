@@ -63,7 +63,8 @@ def find_first_number(s):
 def submit_form():
     question = request.form.get('question-dropdown')
     id = request.form.get('youtube-link')
-    print(id)
+    if question != "2":
+        return redirect("/student")
     try:
         transcript = YouTubeTranscriptApi.get_transcript(id)
         formatter = TextFormatter()
