@@ -5,6 +5,19 @@
         ['Describe the following algorithm',"{{ url_for('static', filename='images/image-2.png') }}"],
         ['Describe the following algorithm',"{{ url_for('static', filename='images/image-3.png') }}"],
     ]
+    function getVideoID(url) {
+        var regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=|shorts\/)([^#\&\?]*).*/;
+        var match = url.match(regExp);
+        if (match && match[2].length == 11) {
+            return match[2];
+        } else {
+            return url
+        }
+    }
+    function doSubmit() {
+        document.getElementById("youtube-link").value = getVideoID(document.getElementById("youtube-link").value);
+        return true
+    }
     var selectedQuestion = 0
     var questionData = questions[selectedQuestion];
     $(document).ready(function() {
@@ -30,7 +43,7 @@
 {% block main %}
 <article>
   <main>
-    <form method="POST" action="{{ url_for('main.submit_form') }}">
+    <form method="POST" action="{{ url_for('main.submit_form') }}" onsubmit="doSubmit()">
         <label for="question-dropdown">Select a question:</label>
         <select id="question-dropdown" name="question-dropdown">
         </select>
