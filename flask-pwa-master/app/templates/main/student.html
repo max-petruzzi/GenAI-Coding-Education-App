@@ -1,0 +1,48 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    questions = [
+        ['Describe the following algorithm:',"{{ url_for('static', filename='images/image-1.png') }}"],
+        ['Describe the following algorithm',"{{ url_for('static', filename='images/image-2.png') }}"],
+        ['Describe the following algorithm',"{{ url_for('static', filename='images/image-3.png') }}"],
+    ]
+    var selectedQuestion = 0
+    var questionData = questions[selectedQuestion];
+    $(document).ready(function() {
+        // Update question description and image when the dropdown value changes
+        
+        $('#question-dropdown').ready(function() {
+            for (let i = 0; i < questions.length; i++) {
+                document.getElementById("question-dropdown").options.add(new Option(`Question ${i+1}`, i) )                
+            }
+            $('#question-description').text(questionData[0]);
+            $('#question-image').attr('src', questionData[1]);
+        });
+
+        $('#question-dropdown').change(function() {
+            selectedQuestion = $(this).val();
+            questionData = questions[selectedQuestion];
+            $('#question-description').text(questionData[0]);
+            $('#question-image').attr('src', questionData[1]);
+        });
+    });
+</script>
+{% extends "layout.html" %}
+{% block main %}
+<article>
+  <main>
+    <form method="POST" action="{{ url_for('main.submit_form') }}">
+        <label for="question-dropdown">Select a question:</label>
+        <select id="question-dropdown" name="question-dropdown">
+        </select>
+        <br>
+        <p id="question-description"></p>
+        <img id="question-image" src="" alt="Question Image">
+        <br>
+        <label for="youtube-link">YouTube Link:</label>
+        <input type="text" id="youtube-link" name="youtube-link">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+  </main>
+</article>
+{% endblock %}
