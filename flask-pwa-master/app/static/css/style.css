@@ -175,13 +175,56 @@ a:hover {
     -webkit-user-select: none;
     touch-action: manipulation;
     width: auto;
+          display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+
+.btn-2 {
+    background-color: #111827;
+    border: 1px solid transparent;
+    border-radius: .75rem;
+    padding: .75rem 2.5rem;
+    margin: 1rem 0rem 1rem 0rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    padding: .75rem 1.2rem;
+    text-align: center;
+    text-decoration: none #6B7280 solid;
+    text-decoration-thickness: auto;
+    transition-duration: .2s;
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+          display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center{
+    text-align: center;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .btn-1:focus {
     box-shadow: none;
     outline: 2px solid transparent;
     outline-offset: 2px;
+      display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .text-small-bold{
@@ -292,12 +335,58 @@ a:hover {
 
 textarea {
     margin: 5px 0px 5px 0px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     letter-spacing: 1px;
     padding: 10px;
     max-width: 100%;
     line-height: 1.5;
     border-radius: 5px;
     border: 1px solid #ccc;
-    box-shadow: 1x 1px 2px #999;
+    box-shadow: 1px 1px 2px #999;
+}
+
+#home-page {
+    padding-left:30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#home-page-btn {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#teacher-page{
+    padding-left:42px;
+    padding-right: 42px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#metrics-page{
+    padding-top:20px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+
+}
+
+.text-bold{
+    font-size:18px;
+    padding-top:0px;
+    font-weight: bold;
+}
+
+.text-grey{
+    font-size:18px;
+    padding-top:0px;
+    color: #555;
+}
+
+#metrics {
+    padding-left:40px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 100px;
 }

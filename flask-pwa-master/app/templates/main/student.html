@@ -44,14 +44,14 @@
 <article>
   <main>
     <form id='mainform' method="POST" action="{{ url_for('main.submit_form') }}" onsubmit="doSubmit()">
-        <label for="question-dropdown">Select a question:</label>
+        <h3 for="question-dropdown" class="title-1">Select a question:</h3>
         <select id="question-dropdown" name="question-dropdown">
         </select>
         <br>
-        <p id="question-description"></p>
+        <p id="question-description" class="text-small-bold"></p>
         <img id="question-image" src="" alt="Question Image">
         <br>
-        <label for="youtube-link">YouTube Link:</label>
+        <h3 class="title-1">YouTube Link:</h3>
         <div><textarea rows="1" cols="40" placeholder="" id="youtube-link" name="youtube-link" form="mainform"></textarea></div>
         <br>
         <div><input class="btn-1" type="submit" value="Submit"></div>

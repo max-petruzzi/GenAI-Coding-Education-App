@@ -19,16 +19,18 @@
 {% block main %}
 <article>
   <main>
-    <p id="qdescription">{{ question }}</p>
-    <img id="qimg" alt="Question Image">
+    <p class="text-bold" id="qdescription">{{ question }}</p>
+    <img id="qimg" alt="Question Image"style="width:400px;height:400px;object-fit:scale-down;">
 
-    <h2>Submission</h2>
+    <h2 class="title-1">Submission</h2>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ youtube_url }}" frameborder="0" allowfullscreen></iframe>
 
-    <h2>Score</h2>
-    <p>{{ score }}/5</p>
-    <h2>Details</h2>
-    <p>{{ details }}</p>
+    <h2 class="title-1">Score</h2>
+    <p class="text-bold">{{ score }}/5</p>
+    <h2 class="title-1">Details</h2>
+    <p class="text-bold">{{ details }}</p>
+      <h2 class="title-1">Comments</h2>
+
   </main>
 </article>
 {% endblock %}

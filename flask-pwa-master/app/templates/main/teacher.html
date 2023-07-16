@@ -6,9 +6,12 @@
         <header>
         </header>
         <main>
+              <div id="teacher-page">
+                <img src="images/icons/icons8-100.png" style="width:75px;height:75px; object-fit:scale-down;">
+                <div class="center"><h4 class="text-bold" style="font-size:15px;margin-top:12px;margin-bottom: 220px;">Welcome Teacher!</h4></div>
             <div><button class="btn-1"><a href="{{ url_for('main.teacher_assignment') }}">New Assignment</a></button></div>
-            <div><button class="btn-1"><a href="{{ url_for('main.teacher_submissions') }}">Submissions</a></button></div>
-
+            <div><button class="btn-1"><a href="{{ url_for('main.teacher_submissions') }}" style="padding-left: 0.95rem; padding-right: 0.95rem;">Submissions</a></button></div>
+            </div>
         </main>
     </article>
 {% endblock %}
