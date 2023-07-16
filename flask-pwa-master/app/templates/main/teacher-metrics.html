@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block main %}
+    <article>
+        <header>
+        </header>
+        <main>
+            <h2 class="title-1">Summary</h2>
+            <h3 class="title-1">Score</h3>
+            <p>4/5</p>
+            <h3 class ="title-1">Places to work on</h3>
+            <p>KNN</p>
+            <h3 class="title-1">Spent most time</h3>
+            <p>Naive Bayes</p>
+            <h3 class="title-1">Least confident in</h3>
+            <p>KNN</p>
+
+
+            <div><button class="btn-1"><a href="{{ url_for('main.teacher_submissions') }}">Return</a></button></div>
+        </main>
+
+    </article>
+{% endblock %}

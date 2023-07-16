@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block main %}
+    <article>
+        <header>
+        </header>
+        <main>
+            <h2 class="title-1">Submissions</h2>
+            <h3 class ="title-1">Homework</h3>
+            <div class="dropdown" id="homework">
+                <input class="text-box" id="homework-text" type="text" placeholder="Select on" readonly>
+                <div class="options">
+                    <div onclick="show('Homework 1', '#homework-text')">Homework 1</div>
+                    <div onclick="show('Homework 2', '#homework-text')">Homework 2</div>
+                </div>
+            </div>
+
+            <script>
+                function show(value, id) {
+                    document.querySelector(id).value = value;
+                }
+                let dropdown = document.querySelector('#homework')
+                dropdown.onclick = function () {
+                    dropdown.classList.toggle("active")
+                }
+            </script>
+            <h3 class ="title-1">Student</h3>
+             <div class="dropdown" id="student">
+                <input class="text-box" id="student-text" type="text" placeholder="Select on" readonly>
+                <div class="options">
+                    <div onclick="show('Student 1', '#student-text')"><a href="{{ url_for('main.teacher_metrics') }}">Student 1</a></div>
+                    <div onclick="show('Student 2', '#student-text')">Student 2</div>
+                </div>
+            </div>
+
+            <script>
+                let dropdown2 = document.querySelector('#student')
+                dropdown2.onclick = function () {
+                    dropdown2.classList.toggle("active")
+                }
+            </script>
+            <div><button class="btn-1"><a href="{{ url_for('main.teacher') }}">Return</a></button></div>
+
+        </main>
+
+    </article>
+{% endblock %}
