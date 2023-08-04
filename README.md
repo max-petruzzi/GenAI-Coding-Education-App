@@ -1,6 +1,6 @@
 # Generative-AI-enabled Mobile App for Coding Education
 
-This was the 1st place winning project in the 2023 McKinsey Digital Hackathon. In collaboration with Code.org, the goal of this work was to help bring coding education to developing countries.
+This was the 1st place-winning project in the 2023 McKinsey Digital Hackathon. In collaboration with Code.org, the goal of this work was to help bring coding education to developing countries.
 
 ### Contributors:   
 Mihir Dhamankar (Carnegie Mellon), Joanna Kennedy (MIT/Harvard), Max Petruzzi (MIT), and Weizhe Zhao (Cornell)
