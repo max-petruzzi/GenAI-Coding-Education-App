@@ -3,7 +3,7 @@
 This was the 1st place winning project in the 2023 McKinsey Digital Hackathon. In collaboration with Code.org, the goal of this work was to help bring coding education to developing countries.
 
 ### Contributors:   
-Mihir Dhamankar, Joanna Kennedy, Max Petruzzi, and Weizhe Zhao  
+Mihir Dhamankar (Carnegie Mellon), Joanna Kennedy (MIT/Harvard), Max Petruzzi (MIT), and Weizhe Zhao (Cornell)
 
 ### Background:  
 With the proliferation of mobile devices and LTE coverage worldwide, mobile applications are a more accessible option for reaching students in developing countries. However, because of the lack of keyboard and limited integrated development environments (IDEs), mobile devices are a challenging medium for delivering software for coding education. As one of four non-governmental organizations (NGOs) part of the 2023 McKinsey Digital Hackathon, Code.org brought this challenge to our team to be completed in a packed 24 hours.
