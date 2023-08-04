@@ -1,0 +1,37 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+  questions = [
+        ['Describe the following algorithm:',"{{ url_for('static', filename='images/image-1.png') }}"],
+        ['Describe the following algorithm',"{{ url_for('static', filename='images/image-2.png') }}"],
+        ['Describe the following algorithm',"{{ url_for('static', filename='images/image-3.png') }}"],
+    ]
+    function setQs() {
+      var q = "{{ question }}"
+      q = parseInt(q)
+      document.getElementById("qdescription").innerText = questions[q][0]
+      document.getElementById("qimg").src = questions[q][1]
+    }
+    window.setTimeout(() => {
+      setQs()
+    }, 3);
+</script>
+{% extends "layout.html" %}
+{% block main %}
+<article>
+  <main>
+    <p class="text-bold" id="qdescription">{{ question }}</p>
+    <img id="qimg" alt="Question Image"style="object-fit:scale-down;">
+
+    <h2 class="title-1">Submission</h2>
+    <div class="ytb-container"><iframe src="https://www.youtube.com/embed/{{ youtube_url }}" frameborder="0" allowfullscreen></iframe></div>
+
+    <h2 class="title-1">Score</h2>
+    <p class="text-bold">{{ score }}/5</p>
+    <h2 class="title-1">Details</h2>
+    <p class="text-bold">{{ details }}</p>
+      <h2 class="title-1">Comments</h2>
+
+  </main>
+</article>
+{% endblock %}
+
