@@ -2,7 +2,9 @@
 
 This was the 1st place-winning project in the 2023 McKinsey Digital Hackathon. In collaboration with Code.org, the goal of this work was to help bring coding education to developing countries.
 
-![Alt text](https://github.com/max-petruzzi/GenAI-Coding-Education-App/blob/9f71fbbff004c0cec1f4ac7b013d5517021b3e33/Photos%20of%20the%20Event/Presenting.jpeg)
+<p align="center">
+  <img src="[your_relative_path_here](https://github.com/max-petruzzi/GenAI-Coding-Education-App/blob/9f71fbbff004c0cec1f4ac7b013d5517021b3e33/Photos%20of%20the%20Event/Presenting.jpeg)" width="350" title="hover text">
+</p>
 
 ### Contributors:   
 Mihir Dhamankar (Carnegie Mellon), Joanna Kennedy (MIT/Harvard), Max Petruzzi (MIT), and Weizhe Zhao (Cornell)
